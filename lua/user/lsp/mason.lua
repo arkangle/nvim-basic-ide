@@ -7,6 +7,8 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
+	"volar",
+	"terraformls",
 }
 
 local settings = {
