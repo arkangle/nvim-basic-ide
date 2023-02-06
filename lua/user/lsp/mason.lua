@@ -9,6 +9,8 @@ local servers = {
 	"yamlls",
 	"volar",
 	"terraformls",
+  "dockerls",
+  "tflint",
 }
 
 local settings = {

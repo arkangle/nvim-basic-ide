@@ -5,7 +5,7 @@ local opts = { silent = true }
 
 --Remap space as leader key
 -- keymap("", "<Space>", "<Nop>", opts)
--- vim.g.mapleader = " "
+vim.g.mapleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -93,3 +93,13 @@ keymap("v", "p", '"_dP', opts)
 -- Move text up and down
 keymap("x", "<C-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<C-k>", ":move '<-2<CR>gv-gv", opts)
+
+-- base64 actions while in visual_mode
+keymap("v", "<leader>64", 'y:let @"=system(\'base64 -w0\', @")<cr>gvP', opts)
+keymap("v", "<leader>6d", 'y:let @"=system(\'base64 --decode\', @")<cr>gvP', opts)
+keymap("v", "<leader>6z", 'y:let @"=system(\'gzip -9 \\| base64 -w0\', @")<cr>gvP', opts)
+keymap("v", "<leader>6u", 'y:let @"=system(\'base64 --decode \\| zcat\', @")<cr>gvP', opts)
+keymap("v", "<leader>j",  'y:let @"=system(\'jq .\', @")<cr>gvP', opts)
+
+keymap("v", "r", '"_dP', opts)
+keymap("n", "<leader>q", "@q", opts)
