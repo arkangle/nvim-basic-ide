@@ -1,16 +1,16 @@
 local servers = {
-	"sumneko_lua",
-	"cssls",
-	"html",
-	"tsserver",
-	"pyright",
-	"bashls",
-	"jsonls",
-	"yamlls",
-	"volar",
-	"terraformls",
-  "dockerls",
-  "tflint",
+    "sumneko_lua",
+    "cssls",
+    "html",
+    "tsserver",
+    "pyright",
+    "bashls",
+    "jsonls",
+    "yamlls",
+    -- "volar",
+    "terraformls",
+    "dockerls",
+    "tflint",
 }
 
 local settings = {
